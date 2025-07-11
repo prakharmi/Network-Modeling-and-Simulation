@@ -1,0 +1,28 @@
+{
+  "name": "crud-webserver",
+  "version": "1.0.0",
+  "description": "RESTful webserver with CRUD operations and cookie-based session handling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "rest",
+    "crud",
+    "session",
+    "cookie",
+    "webserver"
+  ],
+  "author": "Prakhar Mish",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cookie-parser": "^1.4.6",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
