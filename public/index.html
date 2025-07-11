@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>CRUD Web Server Demo</title>
+</head>
+<body>
+    <div class="header">
+        <h1>RESTful CRUD Web Server Demo</h1>
+    </div>
+
+    <!-- Login Section -->
+    <div class="container">
+        <h2>Session Management</h2>
+        <div class="login-form" id="loginForm">
+            <h3>Login</h3>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <button onclick="login()">Login</button>
+        </div>
+        
+        <div class="session-info" id="sessionInfo">
+            <h3>Session Active</h3>
+            <p id="sessionDetails"></p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- CRUD Operations Section -->
+    <div class="container crud-section" id="crudSection">
+        <h2>User Management (CRUD Operations)</h2>
+        
+        <!-- Create User -->
+        <div>
+            <h3>Create New User</h3>
+            <div class="form-group">
+                <label for="newName">Name:</label>
+                <input type="text" id="newName" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="newEmail">Email:</label>
+                <input type="email" id="newEmail" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="newAge">Age:</label>
+                <input type="number" id="newAge" placeholder="Enter age">
+            </div>
+            <button onclick="createUser()">Create User</button>
+        </div>
+
+        <!-- Users List -->
+        <div>
+            <h3>Users List</h3>
+            <button onclick="loadUsers()">Refresh Users</button>
+            <table class="users-table" id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Edit Form (Hidden by default) -->
+        <div class="edit-form" id="editForm">
+            <h3>Edit User</h3>
+            <input type="hidden" id="editId">
+            <div class="form-group">
+                <label for="editName">Name:</label>
+                <input type="text" id="editName">
+            </div>
+            <div class="form-group">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail">
+            </div>
+            <div class="form-group">
+                <label for="editAge">Age:</label>
+                <input type="number" id="editAge">
+            </div>
+            <button onclick="updateUser()">Update User</button>
+            <button onclick="cancelEdit()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Messages -->
+    <div id="messages"></div>
+</body>
+</html>
