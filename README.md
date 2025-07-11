@@ -15,15 +15,16 @@ A RESTful web server built with Node.js and Express.js that provides complete CR
 
 - **Backend**: Node.js, Express.js
 - **Authentication**: Cookie-based sessions with UUID
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend**: Vanilla HTML, CSS, JavaScript
 - **Development**: Nodemon for hot reloading
 
 ## Project Structure
 
 ```
-crud-webserver/
-├── package.json          # Project dependencies and scripts
-├── server.js            # Main server file with API routes
+Network-Modeling-and-Simulation/
+├── crud-webserver/
+│   ├── package.json     # Project dependencies and scripts
+│   └── server.js        # Main server file with API routes
 └── public/
     ├── index.html       # Main web interface
     ├── index.css        # Styling
@@ -34,8 +35,8 @@ crud-webserver/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/prakharmi/crud-webserver.git
-   cd crud-webserver
+   git clone https://github.com/prakharmi/Network-Modeling-and-Simulation.git
+   cd Network-Modeling-and-Simulation/crud-webserver
    ```
 
 2. **Install dependencies**
@@ -91,13 +92,13 @@ crud-webserver/
 # Login
 curl -X POST http://localhost:3000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"username": "prakhar"}' \
+  -d '{"username": "Prakhar"}' \
   -c cookies.txt
 
 # Create a user
 curl -X POST http://localhost:3000/api/users \
   -H "Content-Type: application/json" \
-  -d '{"name": "Prakhar Mishra", "email": "prakharmishraa30@gmail.com", "age": 21}' \
+  -d '{"name": "Prakhar Mishra", "email": "prakharmishraa30@gmail.com", "age": 30}' \
   -b cookies.txt
 
 # Get all users
@@ -159,9 +160,9 @@ The server comes with sample users for testing:
 
 ```javascript
 [
-  { id: 1, name: 'Prakhar', email: 'prakhar@example.com', age: 30 },
-  { id: 2, name: 'Mishra', email: 'mishra@example.com', age: 25 },
-  { id: 3, name: 'Prakhs', email: 'prakhs@example.com', age: 20 }
+  { id: 1, name: 'Prakhar', email: 'john@example.com', age: 30 },
+  { id: 2, name: 'Mishra', email: 'jane@example.com', age: 25 },
+  { id: 3, name: 'Prakhs', email: 'bob@example.com', age: 20 }
 ]
 ```
 
